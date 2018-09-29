@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,13 +12,54 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mengenlehreuhr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-O9-BEi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXb-6Z-MhD" userLabel="Seconds Circle">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="137.5"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2r2-lL-Bj5" userLabel="FiveHour">
+                                        <rect key="frame" x="0.0" y="137.5" width="375" height="127.5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DqX-e5-2R2" userLabel="OneHour">
+                                        <rect key="frame" x="0.0" y="265" width="375" height="127"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-aL-Uf4" userLabel="FiveMinutes">
+                                        <rect key="frame" x="0.0" y="392" width="375" height="127.5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-YC-i4n" userLabel="OneMinute">
+                                        <rect key="frame" x="0.0" y="519.5" width="375" height="127.5"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="NVd-YC-i4n" firstAttribute="height" secondItem="2r2-lL-Bj5" secondAttribute="height" id="3ie-zA-gjP"/>
+                                    <constraint firstItem="DqX-e5-2R2" firstAttribute="height" secondItem="2r2-lL-Bj5" secondAttribute="height" id="GfI-h5-26c"/>
+                                    <constraint firstItem="2r2-lL-Bj5" firstAttribute="height" secondItem="DXb-6Z-MhD" secondAttribute="height" constant="-10" id="V2S-hh-oCJ"/>
+                                    <constraint firstItem="PFm-aL-Uf4" firstAttribute="height" secondItem="2r2-lL-Bj5" secondAttribute="height" id="aMO-cX-Pji"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="BJa-O9-BEi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="3nl-o4-yfH"/>
+                            <constraint firstItem="BJa-O9-BEi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="CTo-cn-zGY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BJa-O9-BEi" secondAttribute="bottom" id="IlX-d6-swv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BJa-O9-BEi" secondAttribute="trailing" id="QTR-kX-EQM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="fiveHourStackView" destination="2r2-lL-Bj5" id="E3e-ym-Cmh"/>
+                        <outlet property="fiveMinuteStackView" destination="DqX-e5-2R2" id="5h3-al-daB"/>
+                        <outlet property="oneHourStackView" destination="DqX-e5-2R2" id="81q-xD-Lbs"/>
+                        <outlet property="oneMinuteStackView" destination="NVd-YC-i4n" id="3dn-Ws-RXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
