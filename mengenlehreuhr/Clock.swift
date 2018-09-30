@@ -71,7 +71,8 @@ class Clock : UIView {
         Bundle.main.loadNibNamed("Clock", owner: self, options: nil)
         addSubview(contentView)
         contentView.frame = self.bounds
-        contentView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+        contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        
         setUpSecondLight()
         
         roundStackViews()
@@ -84,9 +85,8 @@ class Clock : UIView {
     
     
     func setUpSecondLight() {
-        secondLightView.autoresizingMask = [.flexibleWidth, .flexibleHeight];
-        secondLightView.layer.cornerRadius = secondLightView.bounds.size.width/2.0
-        secondLightView.clipsToBounds = true
+        secondLightView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
+        secondLightView.makeLightCircular()
         secondLightView.layer.borderWidth = 6
         secondLightView.layer.borderColor = UIColor.lightGray.cgColor
     }
@@ -96,6 +96,13 @@ class Clock : UIView {
         oneHourContainer.roundCorners(corners: [.topLeft,.topRight,.bottomRight,.bottomLeft], radius: CORNERRADIUS)
         fiveMinuteContainer.roundCorners(corners: [.topLeft,.topRight,.bottomRight,.bottomLeft], radius: CORNERRADIUS)
         oneMinuteContainer.roundCorners(corners: [.topLeft,.topRight,.bottomRight,.bottomLeft], radius: CORNERRADIUS)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.setNeedsDisplay()
+
+        roundStackViews()
     }
     
     func setLightsForTime(date: Date){

@@ -29,4 +29,9 @@ class LightView: UIView {
         backgroundColor = on ? lightColor : UIColor.black
     }
     
+    func makeLightCircular() {
+        layer.cornerRadius = frame.size.width/2
+        clipsToBounds = true
+    }
+    
 }

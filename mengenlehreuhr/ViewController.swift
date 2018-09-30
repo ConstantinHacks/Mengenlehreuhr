@@ -10,18 +10,7 @@ import Foundation
 import UIKit
 
 class ViewController: UIViewController {
-    
-    @IBOutlet weak var secondsCircleContainer: UIView!
-    @IBOutlet weak var fiveHourStackView: UIStackView!
-    @IBOutlet weak var oneHourStackView: UIStackView!
-    @IBOutlet weak var fiveMinuteStackView: UIStackView!
-    @IBOutlet weak var oneMinuteStackView: UIStackView!
-    
-    @IBOutlet weak var fiveHourContainer: UIView!
-    @IBOutlet weak var oneHourContainer: UIView!
-    @IBOutlet weak var fiveMinuteContainer: UIView!
-    @IBOutlet weak var oneMinuteContainer: UIView!
-    
+        
     @IBOutlet weak var clock: Clock!
     
     var currentTimeTimer = Timer()
@@ -34,7 +23,7 @@ class ViewController: UIViewController {
     
     @objc func setClockCurrentTime() {
         clock.setLightsForTime(date: Date())
-        clock.setNeedsDisplay()
     }
+    
 }
 
