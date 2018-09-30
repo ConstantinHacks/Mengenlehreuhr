@@ -21,21 +21,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var fiveMinuteContainer: UIView!
     @IBOutlet weak var oneMinuteContainer: UIView!
     
-    let LIGHTCOUNT = 4
-    let FIVEMINLIGHTCOUNT = 11
     let CORNERRADIUS = CGFloat(12)
-    
-    var fiveHourLights = [LightView]()
-    var oneHourLights = [LightView]()
-    var fiveMinuteLights = [LightView]()
-    var oneMinuteLights = [LightView]()
+    let clock = Clock()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpSecondsLight()
         roundStackViews()
-        fillArrays()
         fillStackViews()
     }
 
@@ -54,45 +47,29 @@ class ViewController: UIViewController {
         oneMinuteContainer.roundCorners(corners: [.topLeft,.topRight,.bottomRight,.bottomLeft], radius: CORNERRADIUS)
     }
     
-    func fillArrays() {
-        for _ in 0..<LIGHTCOUNT {
-            fiveHourLights.append(makeLightView(color: UIColor.red))
-            oneHourLights.append(makeLightView(color: UIColor.red))
-            oneMinuteLights.append(makeLightView(color: UIColor.yellow))
-        }
-        
-        for num in 1...FIVEMINLIGHTCOUNT {
-            if num != 0 && num % 3 == 0 {
-                fiveMinuteLights.append(makeLightView(color: UIColor.yellow))
-            } else {
-                fiveMinuteLights.append(makeLightView(color: UIColor.red))
-            }
-        }
-    }
-    
     func fillStackViews(){
-        for num in 0..<LIGHTCOUNT {
+        for num in 0..<Clock.LIGHTCOUNT {
             if num == 0 {
-                fiveHourLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
-                oneHourLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
-                oneMinuteLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
-            } else if num == LIGHTCOUNT-1 {
-                fiveHourLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
-                oneHourLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
-                oneMinuteLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
+                clock.fiveHourLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
+                clock.oneHourLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
+                clock.oneMinuteLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
+            } else if num == Clock.LIGHTCOUNT-1 {
+                clock.fiveHourLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
+                clock.oneHourLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
+                clock.oneMinuteLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
             }
-            fiveHourStackView.addArrangedSubview(fiveHourLights[num])
-            oneHourStackView.addArrangedSubview(oneHourLights[num])
-            oneMinuteStackView.addArrangedSubview(oneMinuteLights[num])
+            fiveHourStackView.addArrangedSubview(clock.fiveHourLights[num])
+            oneHourStackView.addArrangedSubview(clock.oneHourLights[num])
+            oneMinuteStackView.addArrangedSubview(clock.oneMinuteLights[num])
         }
         
-        for num in 0..<FIVEMINLIGHTCOUNT {
+        for num in 0..<Clock.FIVEMINLIGHTCOUNT {
             if num == 0 {
-                fiveMinuteLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
-            } else if num == FIVEMINLIGHTCOUNT-1 {
-                fiveMinuteLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
+                clock.fiveMinuteLights[num].roundCorners(corners: [.topLeft,.bottomLeft], radius: CORNERRADIUS)
+            } else if num == Clock.FIVEMINLIGHTCOUNT-1 {
+                clock.fiveMinuteLights[num].roundCorners(corners: [.topRight,.bottomRight], radius: CORNERRADIUS)
             }
-            fiveMinuteStackView.addArrangedSubview(fiveMinuteLights[num])
+            fiveMinuteStackView.addArrangedSubview(clock.fiveMinuteLights[num])
         }
     }
     
