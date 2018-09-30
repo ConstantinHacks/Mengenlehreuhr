@@ -15,6 +15,7 @@
 		2FB54020215FCDC3008044AE /* Lights.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5401F215FCDC3008044AE /* Lights.swift */; };
 		2FB54022215FD2F7008044AE /* LightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB54021215FD2F7008044AE /* LightView.swift */; };
 		2FD8A3FC2160652900C3CCEE /* Clock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8A3FB2160652900C3CCEE /* Clock.swift */; };
+		2FD8A3FE2160818700C3CCEE /* Clock.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD8A3FD2160818700C3CCEE /* Clock.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2FB5401F215FCDC3008044AE /* Lights.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lights.swift; sourceTree = "<group>"; };
 		2FB54021215FD2F7008044AE /* LightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightView.swift; sourceTree = "<group>"; };
 		2FD8A3FB2160652900C3CCEE /* Clock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Clock.swift; sourceTree = "<group>"; };
+		2FD8A3FD2160818700C3CCEE /* Clock.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Clock.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				2FB5401F215FCDC3008044AE /* Lights.swift */,
 				2FB54021215FD2F7008044AE /* LightView.swift */,
 				2FD8A3FB2160652900C3CCEE /* Clock.swift */,
+				2FD8A3FD2160818700C3CCEE /* Clock.xib */,
 			);
 			path = mengenlehreuhr;
 			sourceTree = "<group>";
@@ -133,6 +136,7 @@
 			files = (
 				2FB54018215FC8CB008044AE /* LaunchScreen.storyboard in Resources */,
 				2FB54015215FC8CB008044AE /* Assets.xcassets in Resources */,
+				2FD8A3FE2160818700C3CCEE /* Clock.xib in Resources */,
 				2FB54013215FC8CA008044AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

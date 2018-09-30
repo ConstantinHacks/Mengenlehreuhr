@@ -17,104 +17,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-r8-LL2">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-r8-LL2" customClass="Clock" customModule="mengenlehreuhr" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="BJa-O9-BEi">
-                                        <rect key="frame" x="0.0" y="24" width="375" height="599"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DXb-6Z-MhD" userLabel="Seconds Container">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="113.5"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8mW-8g-svT" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                                        <rect key="frame" x="137" y="6" width="101" height="101.5"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" secondItem="8mW-8g-svT" secondAttribute="height" multiplier="1:1" id="xWB-lh-7UM"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="8mW-8g-svT" firstAttribute="top" secondItem="DXb-6Z-MhD" secondAttribute="top" constant="6" id="H1v-8y-uIz"/>
-                                                    <constraint firstItem="8mW-8g-svT" firstAttribute="centerX" secondItem="DXb-6Z-MhD" secondAttribute="centerX" id="hQK-Dp-8YJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="8mW-8g-svT" secondAttribute="bottom" constant="6" id="wHd-HK-U3p"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jfp-v9-Qje" userLabel="Five Hour Container">
-                                                <rect key="frame" x="0.0" y="121.5" width="375" height="113.5"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="2r2-lL-Bj5" userLabel="FiveHour">
-                                                        <rect key="frame" x="6" y="6" width="363" height="101.5"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="2r2-lL-Bj5" firstAttribute="top" secondItem="Jfp-v9-Qje" secondAttribute="top" constant="6" id="4ZP-Tg-ovL"/>
-                                                    <constraint firstItem="2r2-lL-Bj5" firstAttribute="leading" secondItem="Jfp-v9-Qje" secondAttribute="leading" constant="6" id="HHD-iz-98j"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2r2-lL-Bj5" secondAttribute="bottom" constant="6" id="IP5-ed-2dQ"/>
-                                                    <constraint firstAttribute="trailing" secondItem="2r2-lL-Bj5" secondAttribute="trailing" constant="6" id="TsL-LO-5f5"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kkl-8b-1oi" userLabel="One Hour Container">
-                                                <rect key="frame" x="0.0" y="243" width="375" height="113"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="DqX-e5-2R2" userLabel="OneHour">
-                                                        <rect key="frame" x="6" y="6" width="363" height="101"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="DqX-e5-2R2" firstAttribute="top" secondItem="Kkl-8b-1oi" secondAttribute="top" constant="6" id="8RO-gQ-E6D"/>
-                                                    <constraint firstItem="DqX-e5-2R2" firstAttribute="leading" secondItem="Kkl-8b-1oi" secondAttribute="leading" constant="6" id="Kgw-gb-b7P"/>
-                                                    <constraint firstAttribute="bottom" secondItem="DqX-e5-2R2" secondAttribute="bottom" constant="6" id="MNw-4s-EAn"/>
-                                                    <constraint firstAttribute="trailing" secondItem="DqX-e5-2R2" secondAttribute="trailing" constant="6" id="TA7-ca-f3u"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-rQ-8hG" userLabel="Five Minute Container">
-                                                <rect key="frame" x="0.0" y="364" width="375" height="113.5"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="PFm-aL-Uf4" userLabel="FiveMinutes">
-                                                        <rect key="frame" x="6" y="6" width="363" height="101.5"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstItem="PFm-aL-Uf4" firstAttribute="top" secondItem="xfa-rQ-8hG" secondAttribute="top" constant="6" id="3Oi-Si-7Zc"/>
-                                                    <constraint firstItem="PFm-aL-Uf4" firstAttribute="leading" secondItem="xfa-rQ-8hG" secondAttribute="leading" constant="6" id="Msv-Ef-gYh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PFm-aL-Uf4" secondAttribute="trailing" constant="6" id="QA1-2L-RVJ"/>
-                                                    <constraint firstAttribute="bottom" secondItem="PFm-aL-Uf4" secondAttribute="bottom" constant="6" id="W5Z-qU-8gY"/>
-                                                </constraints>
-                                            </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rhT-y3-97D" userLabel="One Minute Container">
-                                                <rect key="frame" x="0.0" y="485.5" width="375" height="113.5"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="NVd-YC-i4n" userLabel="OneMinute">
-                                                        <rect key="frame" x="6" y="6" width="363" height="101.5"/>
-                                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </stackView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="NVd-YC-i4n" secondAttribute="bottom" constant="6" id="CNn-iU-PdF"/>
-                                                    <constraint firstItem="NVd-YC-i4n" firstAttribute="leading" secondItem="rhT-y3-97D" secondAttribute="leading" constant="6" id="LCO-34-zv5"/>
-                                                    <constraint firstItem="NVd-YC-i4n" firstAttribute="top" secondItem="rhT-y3-97D" secondAttribute="top" constant="6" id="e7d-9X-kZs"/>
-                                                    <constraint firstAttribute="trailing" secondItem="NVd-YC-i4n" secondAttribute="trailing" constant="6" id="mLl-zu-epq"/>
-                                                </constraints>
-                                            </view>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="BJa-O9-BEi" secondAttribute="trailing" id="bQM-6D-WQB"/>
-                                    <constraint firstAttribute="bottom" secondItem="BJa-O9-BEi" secondAttribute="bottom" constant="24" id="dlJ-Sj-qBZ"/>
-                                    <constraint firstItem="BJa-O9-BEi" firstAttribute="leading" secondItem="6d8-r8-LL2" secondAttribute="leading" id="lOr-d5-BPd"/>
-                                    <constraint firstItem="BJa-O9-BEi" firstAttribute="top" secondItem="6d8-r8-LL2" secondAttribute="top" constant="24" id="ppq-yZ-SSw"/>
-                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -127,15 +32,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="fiveHourContainer" destination="Jfp-v9-Qje" id="tgu-d5-ENy"/>
-                        <outlet property="fiveHourStackView" destination="2r2-lL-Bj5" id="E3e-ym-Cmh"/>
-                        <outlet property="fiveMinuteContainer" destination="xfa-rQ-8hG" id="92y-hR-xp4"/>
-                        <outlet property="fiveMinuteStackView" destination="PFm-aL-Uf4" id="6VY-A8-jHc"/>
-                        <outlet property="oneHourContainer" destination="Kkl-8b-1oi" id="aTu-hu-HF7"/>
-                        <outlet property="oneHourStackView" destination="DqX-e5-2R2" id="81q-xD-Lbs"/>
-                        <outlet property="oneMinuteContainer" destination="rhT-y3-97D" id="hfh-Ye-JH7"/>
-                        <outlet property="oneMinuteStackView" destination="NVd-YC-i4n" id="3dn-Ws-RXe"/>
-                        <outlet property="secondsLight" destination="8mW-8g-svT" id="YUb-Ei-VNQ"/>
+                        <outlet property="clock" destination="6d8-r8-LL2" id="61T-MI-WH1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

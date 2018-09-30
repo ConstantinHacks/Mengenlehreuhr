@@ -10,7 +10,6 @@ import UIKit
 
 @IBDesignable
 class LightView: UIView {
-
     override init(frame: CGRect) {
         super.init(frame: frame)
     }
@@ -19,7 +18,15 @@ class LightView: UIView {
         super.init(coder: aDecoder)
     }
     
-    func turnOffLight(){
-        backgroundColor = UIColor.black
+    @IBInspectable var lightColor : UIColor = UIColor.black
+    
+    override func prepareForInterfaceBuilder() {
+        super.prepareForInterfaceBuilder()
+        backgroundColor = lightColor
     }
+    
+    func setLight(on: Bool){
+        backgroundColor = on ? lightColor : UIColor.black
+    }
+    
 }
