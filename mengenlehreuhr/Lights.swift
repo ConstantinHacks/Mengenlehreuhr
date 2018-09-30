@@ -9,14 +9,22 @@
 import Foundation
 import UIKit
 
-protocol Light {
-    var color: UIColor { get }
+func makeLightView(color: UIColor) -> LightView {
+    let v = LightView()
+    v.backgroundColor = color
+    return v
 }
 
-struct RedLight: Light {
-    var color = UIColor.red
-}
-
-struct YellowLight: Light {
-    var color = UIColor.yellow
+extension UIView {
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        DispatchQueue.main.async {
+            let path = UIBezierPath(roundedRect: self.bounds,
+                                    byRoundingCorners: corners,
+                                    cornerRadii: CGSize(width: radius, height: radius))
+            let maskLayer = CAShapeLayer()
+            maskLayer.frame = self.bounds
+            maskLayer.path = path.cgPath
+            self.layer.mask = maskLayer
+        }
+    }
 }
