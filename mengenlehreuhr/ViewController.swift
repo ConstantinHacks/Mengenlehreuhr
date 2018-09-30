@@ -24,15 +24,15 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var clock: Clock!
     
-    var timer = Timer()
+    var currentTimeTimer = Timer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setClock), userInfo: nil, repeats: true)
+        currentTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setClockCurrentTime), userInfo: nil, repeats: true)
     }
     
-    @objc func setClock() {
+    @objc func setClockCurrentTime() {
         clock.setLightsForTime(date: Date())
         clock.setNeedsDisplay()
     }
