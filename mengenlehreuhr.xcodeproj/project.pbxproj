@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F26C8552161BFAD00DC4F72 /* ClockInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2F26C8542161BFAD00DC4F72 /* ClockInfoView.xib */; };
+		2F26C8572161C2CC00DC4F72 /* ClockInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F26C8562161C2CC00DC4F72 /* ClockInfoView.swift */; };
 		2FB5400E215FC8CA008044AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5400D215FC8CA008044AE /* AppDelegate.swift */; };
 		2FB54010215FC8CA008044AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FB5400F215FC8CA008044AE /* ViewController.swift */; };
 		2FB54013215FC8CA008044AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FB54011215FC8CA008044AE /* Main.storyboard */; };
@@ -19,6 +21,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F26C8542161BFAD00DC4F72 /* ClockInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ClockInfoView.xib; sourceTree = "<group>"; };
+		2F26C8562161C2CC00DC4F72 /* ClockInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockInfoView.swift; sourceTree = "<group>"; };
 		2FB5400A215FC8CA008044AE /* mengenlehreuhr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mengenlehreuhr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FB5400D215FC8CA008044AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FB5400F215FC8CA008044AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -72,6 +76,8 @@
 				2FB54021215FD2F7008044AE /* LightView.swift */,
 				2FD8A3FB2160652900C3CCEE /* Clock.swift */,
 				2FD8A3FD2160818700C3CCEE /* Clock.xib */,
+				2F26C8562161C2CC00DC4F72 /* ClockInfoView.swift */,
+				2F26C8542161BFAD00DC4F72 /* ClockInfoView.xib */,
 			);
 			path = mengenlehreuhr;
 			sourceTree = "<group>";
@@ -138,6 +144,7 @@
 				2FB54015215FC8CB008044AE /* Assets.xcassets in Resources */,
 				2FD8A3FE2160818700C3CCEE /* Clock.xib in Resources */,
 				2FB54013215FC8CA008044AE /* Main.storyboard in Resources */,
+				2F26C8552161BFAD00DC4F72 /* ClockInfoView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2FB54020215FCDC3008044AE /* Lights.swift in Sources */,
+				2F26C8572161C2CC00DC4F72 /* ClockInfoView.swift in Sources */,
 				2FB54022215FD2F7008044AE /* LightView.swift in Sources */,
 				2FB54010215FC8CA008044AE /* ViewController.swift in Sources */,
 				2FB5400E215FC8CA008044AE /* AppDelegate.swift in Sources */,

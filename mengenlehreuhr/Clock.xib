@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Clock" customModule="mengenlehreuhr" customModuleProvider="target">
             <connections>
-                <outlet property="contentView" destination="TEJ-C4-Y9T" id="AIw-gB-1c4"/>
+                <outlet property="contentView" destination="TEJ-C4-Y9T" id="qnv-1f-1Yq"/>
                 <outlet property="fiveHourContainer" destination="6nj-6J-RrM" id="9p7-l8-2sL"/>
                 <outlet property="fiveHourLV1" destination="gyZ-6w-hct" id="am6-MR-c9a"/>
                 <outlet property="fiveHourLV2" destination="kz8-iT-I1S" id="AVD-3v-bEx"/>

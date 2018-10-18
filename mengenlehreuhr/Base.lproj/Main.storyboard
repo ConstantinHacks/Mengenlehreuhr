@@ -12,32 +12,39 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="mengenlehreuhr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="mengenlehreuhr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6d8-r8-LL2" customClass="Clock" customModule="mengenlehreuhr" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
+                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb8-5G-NzH">
+                                <rect key="frame" x="0.0" y="44" width="375" height="721"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BKd-fr-3IN"/>
+                                </connections>
+                            </scrollView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qsx-0a-gM6">
+                                <rect key="frame" x="168" y="767" width="39" height="37"/>
+                            </pageControl>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="6d8-r8-LL2" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6iN-ia-EPA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6d8-r8-LL2" secondAttribute="bottom" id="DJn-NV-vb1"/>
-                            <constraint firstItem="6d8-r8-LL2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Syb-Ta-zOZ"/>
-                            <constraint firstItem="6d8-r8-LL2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XKe-3y-ZPg"/>
+                            <constraint firstItem="tb8-5G-NzH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BKB-Zu-uQp"/>
+                            <constraint firstItem="tb8-5G-NzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FTP-n0-CL9"/>
+                            <constraint firstAttribute="bottom" secondItem="qsx-0a-gM6" secondAttribute="bottom" constant="8" id="WQM-kF-OBY"/>
+                            <constraint firstItem="tb8-5G-NzH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iJN-Li-V89"/>
+                            <constraint firstItem="qsx-0a-gM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZq-SB-dcd"/>
+                            <constraint firstItem="qsx-0a-gM6" firstAttribute="top" secondItem="tb8-5G-NzH" secondAttribute="bottom" constant="2" id="yfu-fa-NVU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="clock" destination="6d8-r8-LL2" id="61T-MI-WH1"/>
+                        <outlet property="pageControl" destination="qsx-0a-gM6" id="eba-fb-nvp"/>
+                        <outlet property="scrollView" destination="tb8-5G-NzH" id="sYD-O6-9bv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221.59999999999999" y="-54.422788605697157"/>
+            <point key="canvasLocation" x="221.59999999999999" y="-54.679802955665025"/>
         </scene>
     </scenes>
 </document>
