@@ -85,7 +85,6 @@ class Clock : UIView {
     
     
     func setUpSecondLight() {
-        secondLightView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         secondLightView.makeLightCircular()
         secondLightView.layer.borderWidth = 6
         secondLightView.layer.borderColor = UIColor.lightGray.cgColor

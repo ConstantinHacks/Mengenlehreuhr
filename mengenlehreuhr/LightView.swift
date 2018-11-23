@@ -30,7 +30,8 @@ class LightView: UIView {
     }
     
     func makeLightCircular() {
-        layer.cornerRadius = frame.size.width/2
+        frame.size.width = frame.size.height
+        layer.cornerRadius = (frame.size.width / 2) - 15
         clipsToBounds = true
     }
     

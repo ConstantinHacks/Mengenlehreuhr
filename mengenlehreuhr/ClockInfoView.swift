@@ -8,11 +8,13 @@
 
 import Foundation
 import UIKit
+import WebKit
 
 class ClockInfoView : UIView {
     let nibName = "ClockInfoView"
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var webView: WKWebView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,6 +29,7 @@ class ClockInfoView : UIView {
     func xibSetup() {
         Bundle.main.loadNibNamed("ClockInfoView", owner: self, options: nil)
         addSubview(contentView)
+        webView.load(URLRequest(url: URL(string: "https://en.m.wikipedia.org/wiki/Mengenlehreuhr")!))
         contentView.frame = self.bounds
     }
     

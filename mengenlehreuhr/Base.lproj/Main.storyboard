@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb8-5G-NzH">
-                                <rect key="frame" x="0.0" y="44" width="375" height="721"/>
+                                <rect key="frame" x="0.0" y="44" width="375" height="723"/>
                                 <connections>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="BKd-fr-3IN"/>
                                 </connections>
@@ -30,10 +30,10 @@
                         <constraints>
                             <constraint firstItem="tb8-5G-NzH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BKB-Zu-uQp"/>
                             <constraint firstItem="tb8-5G-NzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FTP-n0-CL9"/>
+                            <constraint firstItem="tb8-5G-NzH" firstAttribute="bottom" secondItem="qsx-0a-gM6" secondAttribute="top" id="Pfw-iJ-gMb"/>
                             <constraint firstAttribute="bottom" secondItem="qsx-0a-gM6" secondAttribute="bottom" constant="8" id="WQM-kF-OBY"/>
                             <constraint firstItem="tb8-5G-NzH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iJN-Li-V89"/>
                             <constraint firstItem="qsx-0a-gM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZq-SB-dcd"/>
-                            <constraint firstItem="qsx-0a-gM6" firstAttribute="top" secondItem="tb8-5G-NzH" secondAttribute="bottom" constant="2" id="yfu-fa-NVU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
