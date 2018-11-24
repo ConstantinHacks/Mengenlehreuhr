@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NOs-0J-3LQ">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,32 +17,88 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tb8-5G-NzH">
-                                <rect key="frame" x="0.0" y="44" width="375" height="723"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SRe-DZ-iWP" customClass="Clock" customModule="mengenlehreuhr" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <viewLayoutGuide key="safeArea" id="GKv-hA-8ts"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="detailDisclosure" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xL7-ln-9l9">
+                                <rect key="frame" x="338" y="103" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BKd-fr-3IN"/>
+                                    <action selector="showInfoButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swe-sg-roG"/>
                                 </connections>
-                            </scrollView>
-                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="qsx-0a-gM6">
-                                <rect key="frame" x="168" y="767" width="39" height="37"/>
-                            </pageControl>
+                            </button>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="tb8-5G-NzH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BKB-Zu-uQp"/>
-                            <constraint firstItem="tb8-5G-NzH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="FTP-n0-CL9"/>
-                            <constraint firstItem="tb8-5G-NzH" firstAttribute="bottom" secondItem="qsx-0a-gM6" secondAttribute="top" id="Pfw-iJ-gMb"/>
-                            <constraint firstAttribute="bottom" secondItem="qsx-0a-gM6" secondAttribute="bottom" constant="8" id="WQM-kF-OBY"/>
-                            <constraint firstItem="tb8-5G-NzH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="iJN-Li-V89"/>
-                            <constraint firstItem="qsx-0a-gM6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rZq-SB-dcd"/>
+                            <constraint firstItem="xL7-ln-9l9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="0Fl-Qj-7dG"/>
+                            <constraint firstItem="SRe-DZ-iWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="9se-8B-XMF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xL7-ln-9l9" secondAttribute="trailing" constant="15" id="ChO-BS-vWY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SRe-DZ-iWP" secondAttribute="trailing" id="EVJ-LH-kOQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="SRe-DZ-iWP" secondAttribute="bottom" id="PBf-vS-FeU"/>
+                            <constraint firstItem="SRe-DZ-iWP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="xTU-Mc-NQl"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="EFv-au-I7d"/>
                     <connections>
-                        <outlet property="pageControl" destination="qsx-0a-gM6" id="eba-fb-nvp"/>
-                        <outlet property="scrollView" destination="tb8-5G-NzH" id="sYD-O6-9bv"/>
+                        <segue destination="w75-22-2uH" kind="show" id="Eqx-u3-wTh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1164" y="-54.679802955665025"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="aPS-3f-f0G">
+            <objects>
+                <viewController storyboardIdentifier="WebViewController" id="w75-22-2uH" customClass="WebViewController" customModule="mengenlehreuhr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bjN-rE-AHI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dU1-ZR-8Ee">
+                                <rect key="frame" x="0.0" y="88" width="375" height="690"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dU1-ZR-8Ee" firstAttribute="top" secondItem="PMs-Yy-RiO" secondAttribute="top" id="DxF-cb-Whc"/>
+                            <constraint firstItem="dU1-ZR-8Ee" firstAttribute="leading" secondItem="PMs-Yy-RiO" secondAttribute="leading" id="Thy-ve-12N"/>
+                            <constraint firstItem="PMs-Yy-RiO" firstAttribute="bottom" secondItem="dU1-ZR-8Ee" secondAttribute="bottom" id="iHP-LJ-EUK"/>
+                            <constraint firstItem="PMs-Yy-RiO" firstAttribute="trailing" secondItem="dU1-ZR-8Ee" secondAttribute="trailing" id="taN-jQ-gf1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PMs-Yy-RiO"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="dU1-ZR-8Ee" id="ffP-7b-zeM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="688-As-dhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010.4000000000001" y="-55.418719211822662"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="XRM-fW-WC6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NOs-0J-3LQ" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="wTz-8R-0hS">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Npd-KO-kGS"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rjt-Gg-5u9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="221.59999999999999" y="-54.679802955665025"/>
         </scene>

@@ -9,53 +9,33 @@
 import Foundation
 import UIKit
 
+
+
 class ViewController: UIViewController, UIScrollViewDelegate {
-        
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
-    
-    let clock = Clock()
-    let clockInfoView = ClockInfoView()
+    fileprivate let clock = Clock()
     var currentTimeTimer = Timer()
+    
+    @IBAction func showInfoButtonPressed(_ sender: Any) {
+        showWebviewController()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        pageControl.numberOfPages = 2
-        pageControl.currentPage = 0
-        
-        scrollView.isPagingEnabled = true
-        
-        scrollView.contentInsetAdjustmentBehavior = .never
-
-        setUpScrollView()
+        navigationController?.navigationBar.barTintColor = UIColor.red
+        navigationController?.navigationBar.tintColor = UIColor.white
 
         currentTimeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.setClockCurrentTime), userInfo: nil, repeats: true)
-    }
-    
-    func setUpScrollView(){
-        scrollView.contentSize = CGSize(width: view.frame.width * CGFloat(2), height: scrollView.frame.height)
-        
-        clock.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: scrollView.frame.height)
-        clockInfoView.frame = CGRect(x: view.frame.width, y: 0, width: view.frame.width, height: scrollView.frame.height)
-        
-        scrollView.addSubview(clock)
-        scrollView.addSubview(clockInfoView)
-    }
-    
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-        setUpScrollView()
     }
     
     @objc func setClockCurrentTime() {
         clock.setLightsForTime(date: Date())
     }
- 
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
+    
+    func showWebviewController() {
+        let VC1 = self.storyboard!.instantiateViewController(withIdentifier: "WebViewController") as! WebViewController
+        self.navigationController!.pushViewController(VC1, animated: true)
     }
+    
     
 }
 

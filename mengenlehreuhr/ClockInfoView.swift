@@ -29,8 +29,12 @@ class ClockInfoView : UIView {
     func xibSetup() {
         Bundle.main.loadNibNamed("ClockInfoView", owner: self, options: nil)
         addSubview(contentView)
-        webView.load(URLRequest(url: URL(string: "https://en.m.wikipedia.org/wiki/Mengenlehreuhr")!))
+
         contentView.frame = self.bounds
+    }
+    
+    class func instanceFromNib() -> UIView {
+        return UINib(nibName: "ClockInfoView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
 }

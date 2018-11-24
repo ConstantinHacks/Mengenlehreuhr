@@ -10,7 +10,6 @@ import Foundation
 import UIKit
 
 class Clock : UIView {
-    
     @IBOutlet weak var secondLightView: LightView!
     
     @IBOutlet weak var fiveHourLV1: LightView!
@@ -70,6 +69,7 @@ class Clock : UIView {
     func xibSetup() {
         Bundle.main.loadNibNamed("Clock", owner: self, options: nil)
         addSubview(contentView)
+                
         contentView.frame = self.bounds
         contentView.autoresizingMask = [.flexibleHeight,.flexibleWidth]
         

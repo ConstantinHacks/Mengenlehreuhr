@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="ipad9_7" orientation="landscape">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -44,17 +44,17 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="TEJ-C4-Y9T">
-            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="dCp-85-fPH">
-                    <rect key="frame" x="6" y="6" width="1012" height="756"/>
+                    <rect key="frame" x="6" y="6" width="308" height="556"/>
                     <subviews>
                         <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NiR-uw-kcN" userLabel="Seconds Container">
-                            <rect key="frame" x="0.0" y="0.0" width="1012" height="145"/>
+                            <rect key="frame" x="0.0" y="0.0" width="308" height="105"/>
                             <subviews>
                                 <view autoresizesSubviews="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqu-lc-ujD" userLabel="Second Light View" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                    <rect key="frame" x="435.5" y="2" width="141" height="141"/>
+                                    <rect key="frame" x="103.5" y="2" width="101" height="101"/>
                                     <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="width" secondItem="dqu-lc-ujD" secondAttribute="height" multiplier="1:1" id="Keu-g6-Gkr"/>
@@ -74,13 +74,13 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6nj-6J-RrM" userLabel="Five Hour Container">
-                            <rect key="frame" x="0.0" y="153" width="1012" height="144.5"/>
+                            <rect key="frame" x="0.0" y="113" width="308" height="104.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="KkI-Wx-iCZ" userLabel="FiveHour">
-                                    <rect key="frame" x="6" y="6" width="1000" height="132.5"/>
+                                    <rect key="frame" x="6" y="6" width="296" height="92.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gyZ-6w-hct" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="241" height="132.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -89,7 +89,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kz8-iT-I1S" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="253" y="0.0" width="241" height="132.5"/>
+                                            <rect key="frame" x="77" y="0.0" width="65" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -98,7 +98,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LDQ-hH-46u" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="506" y="0.0" width="241" height="132.5"/>
+                                            <rect key="frame" x="154" y="0.0" width="65" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -107,7 +107,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QVx-lk-wPd" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="759" y="0.0" width="241" height="132.5"/>
+                                            <rect key="frame" x="231" y="0.0" width="65" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -128,13 +128,13 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ahj-q3-EWa" userLabel="One Hour Container">
-                            <rect key="frame" x="0.0" y="305.5" width="1012" height="145"/>
+                            <rect key="frame" x="0.0" y="225.5" width="308" height="105"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Wnq-rZ-atT" userLabel="OneHour">
-                                    <rect key="frame" x="6" y="6" width="1000" height="133"/>
+                                    <rect key="frame" x="6" y="6" width="296" height="93"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h4x-Qs-mbP" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -143,7 +143,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6rf-ea-Xe9" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="253" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="77" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -152,7 +152,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mJA-0D-5bc" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="506" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="154" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -161,7 +161,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qdu-Xp-Pvu" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="759" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="231" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -182,13 +182,13 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SCo-0f-dib" userLabel="Five Minute Container">
-                            <rect key="frame" x="0.0" y="458.5" width="1012" height="144.5"/>
+                            <rect key="frame" x="0.0" y="338.5" width="308" height="104.5"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="VMF-w2-NkP" userLabel="FiveMinutes">
-                                    <rect key="frame" x="6" y="6" width="1000" height="132.5"/>
+                                    <rect key="frame" x="6" y="6" width="296" height="92.5"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1Ca-7s-lw3" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -197,7 +197,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fnP-xT-hEG" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="92" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="28" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -206,7 +206,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wXF-gt-ul0" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="184" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="56" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -215,7 +215,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HBo-qI-H7K" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="276" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="84" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -224,7 +224,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntK-NY-vM2" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="368" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="112" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -233,7 +233,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uP4-zw-EZf" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="460" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="140" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -242,7 +242,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTu-1Z-Isi" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="552" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="168" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -251,7 +251,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aw1-YM-x4a" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="644" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="196" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -260,7 +260,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJt-35-XaF" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="736" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="224" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -269,7 +269,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5F1-YA-Uom" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="828" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="252" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -278,7 +278,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dY1-C0-U6Q" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="920" y="0.0" width="80" height="132.5"/>
+                                            <rect key="frame" x="280" y="0.0" width="16" height="92.5"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -299,13 +299,13 @@
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZEs-yM-9AF" userLabel="One Minute Container">
-                            <rect key="frame" x="0.0" y="611" width="1012" height="145"/>
+                            <rect key="frame" x="0.0" y="451" width="308" height="105"/>
                             <subviews>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="joh-St-Z7V" userLabel="OneMinute">
-                                    <rect key="frame" x="6" y="6" width="1000" height="133"/>
+                                    <rect key="frame" x="6" y="6" width="296" height="93"/>
                                     <subviews>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ddm-ib-MGm" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -314,7 +314,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kzo-Rn-q2K" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="253" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="77" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -323,7 +323,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mpb-V9-XaR" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="506" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="154" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -332,7 +332,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3E4-UJ-vqm" customClass="LightView" customModule="mengenlehreuhr" customModuleProvider="target">
-                                            <rect key="frame" x="759" y="0.0" width="241" height="133"/>
+                                            <rect key="frame" x="231" y="0.0" width="65" height="93"/>
                                             <color key="backgroundColor" red="0.99942404029999998" green="0.98555368190000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="color" keyPath="lightColor">
@@ -365,7 +365,7 @@
             <nil key="simulatedTopBarMetrics"/>
             <nil key="simulatedBottomBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="MqY-AD-EGh"/>
-            <point key="canvasLocation" x="53.623188405797109" y="52.901785714285715"/>
+            <point key="canvasLocation" x="52.5" y="52.816901408450704"/>
         </view>
     </objects>
 </document>
